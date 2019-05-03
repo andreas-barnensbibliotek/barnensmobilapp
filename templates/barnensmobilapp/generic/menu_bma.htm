@@ -1,0 +1,17 @@
+﻿<div><img class="imgbokomslag" src="images/bbimages/avatar/<%=avatar %>" /></div>
+<ul data-role="listview" >
+    <li data-role="list-divider"></li>
+    <li><a href="#hem">Startsida</a></li>
+    <li><a href="#boktips">Boktips</a></li>
+    <li><a href="#katalog">Sök bok</a></li>
+    <li><a href="#sagomaskinen">Sagomaskinen</a></li>               
+    <li data-role="list-divider"></li>
+    <li><a href="#krypin">Krypin</a></li>
+    <li><a href="#mybooks">Mina böcker</a></li>
+            
+    <li data-role="list-divider"></li>
+    <% if(votedebug == '1' || votetime == '1'){ %>
+        <li><a href="#votepage">Röstlista</a></li>                  
+    <%};%>
+    <li><a href="#login">Logga ut</a></li>   
+</ul>

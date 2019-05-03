@@ -1,0 +1,23 @@
+@import "../var/_variabler.scss";
+
+
+/* mainboxarna med olika färger grundutförandet här */
+
+.main_boxitem{
+	
+	padding:1%;
+	margin:1%;
+	font-size:0.9em;
+	img{
+		width:100%;
+		max-width:250px;
+		}
+	h2{
+		margin-top:0px;
+		margin-bottom:0px;
+		font-size:1.0em;
+	}
+	p {
+		margin-top:0px; 
+    }
+}

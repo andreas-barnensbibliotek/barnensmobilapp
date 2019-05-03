@@ -1,0 +1,16 @@
+﻿<% _.each(collection, function(model) { %>
+    <% _.each(model.Boklist, function(item) { %>
+        <li><a href="#bokdetail/<%= item.bookid %>">
+            <img src="<%= item.ImgSrc %>">
+            <h2> <%= item.title %></h2>
+            <p><%= item.Review %></p></a>
+            <% if (item.Userhasvoted >0){ %>
+                <a class="voted ui-icon-check" data-icon="check" rel="<%= item.bookid %>" data-rel="popup"   data-position-to="window" data-transition="pop">Röstar på</a>
+
+             <% } else { %>
+                <a class="vote ui-icon-action" data-icon="action" rel="<%= item.bookid %>" data-rel="popup"   data-position-to="window" data-transition="pop">Rösta</a>
+            <% } %>
+        </li>
+    <% }); %>
+<% }); %>
+

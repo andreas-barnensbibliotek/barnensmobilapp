@@ -1,0 +1,11 @@
+﻿<% _.each(collection, function(model) { %>
+    <% _.each(model.Boklist, function(item) { %>
+        <li><a href="#bokdetail/<%= item.bookid %>">
+            <img src="<%= item.ImgSrc %>">
+            <h2> <%= item.title %></h2>
+            <p><%= item.Review %></p></a> 
+            
+        </li>
+    <% }); %>
+<% }); %>
+

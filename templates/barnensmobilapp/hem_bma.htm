@@ -1,0 +1,73 @@
+﻿<div data-role="header">
+    <div id="headlogo" style="height:60px;">
+        
+        <div id="debug">
+        </div>
+    </div>
+        <a id="menubtn" href="#nav-panel" data-icon="barss" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Menu</a>
+        
+</div><!-- /header -->
+    <div id="startsidan" role="main" class="ui-content jqm-content jqm-fullwidth">
+       
+        <div id="blocklinks" class="ui-grid-a">
+                                     
+            <div class="ui-block-a">
+                <div id="forfattare"><img style="max-width:35px;" src="css/themes/images/ajax-loader.gif"/></div>
+            </div>
+            <div class="ui-block-b">
+                <div id="nyheter"><img style="max-width:35px;" src="css/themes/images/ajax-loader.gif" /></div>
+                
+            </div>
+           
+        </div><!-- /grid-a -->
+        <div id="latestbooks" class="ui-grid-d imgbokomslagtumb">            
+                <div class="ui-block-a">Nya böcker:</div>
+                <div class="ui-block-b"><img style="max-width:35px;" src="css/themes/images/ajax-loader.gif"/></div>
+                <div class="ui-block-c"><img style="max-width:35px;" src="css/themes/images/ajax-loader.gif"/></div>
+                <div class="ui-block-d"><img style="max-width:35px;" src="css/themes/images/ajax-loader.gif"/></div>
+                <div class="ui-block-e"><img style="max-width:35px;" src="css/themes/images/ajax-loader.gif"/></div>
+            </div><!-- /grid-c -->
+        <div class="ui-grid-solo">
+            <div class="ui-block-a">
+                <div id="bokpuff">
+                    <div id="bp_bokpuffenContainer" class="bp_bokpuffenContainercls" rel="barnochunga"><img style="max-width:35px;" src="css/themes/images/ajax-loader.gif" /></div>
+                </div>
+            </div>
+        </div>
+       
+        
+    </div><!-- /content -->
+
+
+    <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+        <div id="usermny"><a href="#krypin"><img class="imgbokomslag" src="images/bbimages/avatar/<%=model.avatar %>" /></a></div>
+        <ul data-role="listview" >
+            <li data-role="list-divider"></li>
+            <li><a href="#hem">Startsida</a></li>
+            <li><a href="#boktips">Boktips</a></li>
+            <li><a href="#katalog">Sök bok</a></li>
+            <li><a href="#sagomaskinen">Sagomaskinen</a></li>               
+            <li data-role="list-divider"></li>
+            <li><a href="#krypin">Krypin</a></li>
+            <li><a href="#mybooks">Mina böcker</a></li>
+            
+            <li data-role="list-divider"></li>
+            <% if(model.votedebug == 1 || model.votetime == 1){ %>                    
+                <%if (model.votedfortotal ==1){%>
+                    <li><a href="#votepagevotedtotal">Röstlista <% if(model.votedebug == 1){ %> Dev <% } %></a></li>  
+                <%}else{%>
+                    <li><a href="#votepage">Röstlista <% if(model.votedebug == 1){ %> Dev <% } %></a></li>
+                <%};%>
+            <%};%>
+            <li><a href="#login">Logga ut</a></li>   
+        </ul>
+        
+    </div><!-- /panel -->
+<div data-role="footer" data-position="fixed">
+	<div data-role="navbar" data-iconpos="left">
+    <ul>
+        <li><a href="#information" class="ui-btn-active" data-icon="info">Information</a></li>
+        <li><a href="#login"  data-icon="power">Logga ut</a></li>
+    </ul>
+    </div><!-- /navbar -->
+</div>

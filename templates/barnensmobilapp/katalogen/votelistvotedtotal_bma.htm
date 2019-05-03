@@ -1,0 +1,7 @@
+﻿<% _.each(collection, function(model) { %>
+    <li><a href="#bokdetail/<%= model.bookid %>">
+        <img src="<%= model.bookimgsrc %>">
+        <h2> <%= model.booktitle %></h2>  
+        </a>   
+   </li>
+<% }); %>

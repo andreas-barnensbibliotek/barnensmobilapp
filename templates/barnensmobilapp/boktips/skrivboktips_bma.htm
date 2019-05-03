@@ -1,0 +1,61 @@
+﻿<div data-role="header">
+        <div id="headlogo">
+            <img src="images/bbimages/bblogo2.png" />
+            <div id="debug">
+            </div>
+        </div>        
+    </div><!-- /header -->
+    <div role="main" class="ui-content jqm-content jqm-fullwidth">
+
+       
+        <form method="get" data-transition="flip" action="boktipsInserted.html">
+        <h2>Skriv ditt boktips</h2>
+        <p>Här kan du tipsa om böcker du tycker om. </p>
+        
+            <label for="txtbooktitle">Vad heter boken du vill tipsa om? </label>
+            <input type="text" name="txtbooktitle" id="txtbooktitle" value="" />
+      
+            <label for="txtbooktips">Vad handlar boken om och vad tycker du om den?</label>
+            <textarea cols="40" rows="8" name="txtbooktips" id="txtbooktips"></textarea>
+        
+            <label for="sliderAgeWhoLikeThisBook">Hur gammal tror du att man borde vara för att tycka om boken?</label>
+            <input type="range" name="sliderAgeWhoLikeThisBook" id="sliderAgeWhoLikeThisBook" value="7" min="0" max="20" />
+    
+            <label for="select-choice-0" class="select">Vad tycker du boken handlar om? </label>
+            <select name="select-choice-0" id="select-choice-1"  >
+                
+                <option value="1">Barn i Världen</option>
+                <option value="2">Deckare</option>
+                <option value="3">Djur</option>
+                <option value="4">Fakta</option>
+                <option value="5">Fantasy</option>
+                <option value="6">Framtiden</option>
+                <option value="7">Förr i tiden</option>
+                <option value="8">Gråta</option>
+                <option value="9">Kompisar</option>                
+                <option value="10">Kärlek</option>
+                <option value="11">Musik</option>
+                <option value="12">Saga</option>
+                <option value="13">Skolan</option>
+                <option value="14">Skratta</option>
+                <option value="15">Skräck</option>
+                <option value="16">Sport</option>
+                <option value="17">Spänning</option>
+                <option value="18">Spöken</option>
+                <option value="19">äventyr</option>
+                
+            </select>
+                       
+        <div >
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a"><button type="submit" id="sendBoktips" data-theme="c">Skicka</button></div>
+                <div class="ui-block-b"><a href="#boktips" class="ui-btn ui-btn-c ui-shadow ui-corner-all">Avbryt</a></div>
+            </fieldset>
+        </div>
+    </form>
+
+        <a href="#boktips" data-rel="back" data-ajax="false" class=" ui-btn ui-shadow ui-corner-all ui-mini ui-btn-inline ui-icon-carat-l ui-btn-icon-left ui-alt-icon ui-nodisc-icon">Tillbaka</a>
+        
+     <p>&nbsp;</p>
+    </div><!-- /content -->
+    

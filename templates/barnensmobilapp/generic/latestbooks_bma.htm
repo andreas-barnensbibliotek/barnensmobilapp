@@ -1,0 +1,21 @@
+﻿    <% _.each(collection, function(model) { %>     
+<h1>Nya böcker:</h1>
+                <% _.each(model.Boklist, function(item,i) { %>    
+                    
+                    <% if(i==0){ %>
+                        <div class="ui-block-a"><a href="#bokdetail/<%= item.bookid %>" ><img  src="<%=item.ImgSrc%>" /></a></div>
+                    <%};%>
+                    <% if(i==1){ %>
+                        <div class="ui-block-b"><a href="#bokdetail/<%= item.bookid %>" ><img  src="<%=item.ImgSrc%>" /></a></div>
+                    <%};%>
+                    <% if(i==2){ %>
+                        <div class="ui-block-c"><a href="#bokdetail/<%= item.bookid %>" ><img  src="<%=item.ImgSrc%>" /></a></div>
+                    <%};%>
+                    <% if(i==3){ %>
+                        <div class="ui-block-d"><a href="#bokdetail/<%= item.bookid %>" ><img  src="<%=item.ImgSrc%>" /></a></div>
+                    <%};%>
+                    <% if(i==4){ %>
+                        <div class="ui-block-e"><a href="#bokdetail/<%= item.bookid %>" ><img  src="<%=item.ImgSrc%>" /></a></div>
+                    <%};%>     
+                <% }); %> 
+    <% }); %>

@@ -1,0 +1,67 @@
+﻿<div data-role="header">
+        <div id="headlogo">
+            <img src="images/bbimages/bblogo2.png" />
+            <div id="debug">
+            </div>
+        </div>
+        <a id="menubtn" href="#nav-panel" data-icon="barss" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Menu</a>
+        
+    </div><!-- /header -->
+    <div role="main" class="ui-content jqm-content jqm-fullwidth">  
+        <div class="boktitel">
+        <h2>Sagomaskinen</h2>
+        </div>                 
+         <form method="get" data-transition="flip" action="sagomaskinenvisa.html" id="sagomaskinenform">            
+            <p>Skriv i de ord du vill i rutorna nedanf&ouml;r och klicka p&aring; knappen. Vips s&aring; har du gjort en liten saga!</p>
+            
+                <label for="txtord1">Substantiv(en) t.ex. banan, gris, sax</label>
+                <input type="text" name="txtord1" id="txtord1" value="h&auml;st" />
+      
+                <label for="txtord2">Substantiv(ett) t.ex. tr&auml;d, kylsk&aring;p </label>
+                <input type="text" name="txtord2" id="txtord2" value="&auml;pple" />
+        
+                <label for="txtord3">Verb, att g&ouml;ra n&aring;got: </label>
+                <input type="text" name="txtord3" id="txtord3" value="plocka blommor" />
+                <label for="txtord4">Substantiv(en)   t.ex. s&auml;ng, falukorv</label>
+                <input type="text" name="txtord4" id="txtord4" value="tandborste" />
+
+                <label for="txtord5">Adjektiv: (t.ex. rolig, ful, smutsig)</label>
+                <input type="text" name="txtord5" id="txtord5" value="rutig" />
+                            
+            <div >
+                <fieldset class="ui-grid-a">
+                    <button type="submit" id="skapaSaga" data-theme="c">G&ouml;r en saga</button>
+                </fieldset>
+            </div>
+        </form>
+        <a href="#sagomaskinen" data-rel="back" data-ajax="false" class=" ui-btn ui-shadow ui-corner-all ui-mini ui-btn-inline ui-icon-carat-l ui-btn-icon-left ui-alt-icon ui-nodisc-icon">Tillbaka</a>
+        
+     <p>&nbsp;</p>
+    </div><!-- /content -->
+    <div data-role="panel" data-display="overlay" data-theme="b" id="nav-panel">      
+
+         <div id="usermny">
+            <a href="#krypin"><img class="imgbokomslag" src="images/bbimages/avatar/<%=model.avatar %>" /></a>
+        </div>
+        <ul data-role="listview" >
+            <li data-role="list-divider"></li>
+            <li><a href="#hem">Startsida</a></li>
+            <li><a href="#boktips">Boktips</a></li>
+            <li><a href="#katalog">Sök bok</a></li>
+            <li><a href="#sagomaskinen">Sagomaskinen</a></li>               
+            <li data-role="list-divider"></li>
+            <li><a href="#krypin">Krypin</a></li>
+            <li><a href="#mybooks">Mina böcker</a></li>
+            
+            <li data-role="list-divider"></li>
+              <% if(model.votedebug == 1 || model.votetime == 1){ %>                     
+                <%if (model.votedfortotal ==1){%>
+                    <li><a href="#votepagevotedtotal">Röstlista</a></li>  
+                <%}else{%>
+                    <li><a href="#votepage">Röstlista</a></li>
+                <%};%>
+            <%};%>
+            <li><a href="#login">Logga ut</a></li>   
+        </ul>
+
+    </div><!-- /panel -->

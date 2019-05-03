@@ -1,0 +1,19 @@
+﻿<h3>Vad tycker andra om boken?</h3>        
+    <ul>
+        <% _.each(collection, function(model) { %>
+            <% _.each(model.bokomdomen, function(item) { %>
+                <% if (item.tipname ==''){ %>
+                    <li class="ui-body ui-body-a ui-corner-all">
+                        <p>Finns inget att visa</p>
+                    </li>           
+                <% } else { %>
+                    <li class="ui-body ui-body-a ui-corner-all">
+                       
+                        <h4 id="H1">»<%= item.tipname %>, <%= item.age %>år</h4>
+                        <p><%= item.review %></p>
+                        
+                    </li>           
+                <% } %>
+            <% }); %>
+        <% }); %>
+    </ul>

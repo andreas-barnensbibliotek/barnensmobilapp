@@ -1,0 +1,8 @@
+﻿<% _.each(collection, function(model) { %>
+    <li><a href="#bokdetail/<%= model.bookid %>">
+        <img src="<%= model.bookimgsrc %>">
+        <h2> <%= model.booktitle %></h2>      
+        </a>   
+        <a class="voted ui-icon-check" data-icon="check" rel="<%= model.bookid %>" data-rel="popup"   data-position-to="window" data-transition="pop">Röstar på</a>                              
+    </li>
+<% }); %>

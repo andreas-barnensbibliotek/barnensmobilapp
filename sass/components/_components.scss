@@ -1,0 +1,26 @@
+
+/* mainboxarna med olika färger grundutförandet här */
+
+.base_main_boxitem{	
+	padding:2%;
+	margin:1%;
+	font-size:90%;
+	img{
+		width:100%;
+		max-width:250px;
+		}
+	h1{
+		margin-top:0.5%;
+		margin-bottom:0.2%;
+		font-size:130%;
+
+	}
+	h2{
+		margin-top:0px;
+		margin-bottom:0px;
+		font-size:1.0em;
+	}
+	p {
+		margin-top:0px;		
+    }
+}

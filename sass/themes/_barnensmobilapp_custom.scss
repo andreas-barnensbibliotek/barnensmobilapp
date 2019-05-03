@@ -1,0 +1,430 @@
+﻿/*start */
+@import "../var/_variabler.scss";
+@import "../mixins/_media-queries.scss";
+@import "../components/_components.scss";
+
+#headlogo{
+background-color:$headerbackground;
+background:url(../images/headbgimg.png) 50% 50% no-repeat no-repeat;
+background-repeat:repeat-x;
+	img{
+		padding-left:7.5%;				
+        max-height:100px; 
+        @include screen(371px,550px) {
+            padding-left:10.5%;
+        } 
+         @include max-screen(370px) {
+            padding-left:14.5%;
+        } 
+	}
+}
+#menubtn{
+    padding-top:20px;
+    box-shadow: none!important;
+}
+#nav-panel{
+
+	background-color:$Navbackgroundcolor;    
+    border-right: 1px solid $Navbordercolor;
+}
+
+.ui-icon-barss{
+    background: url(../css/themes/images/icons-png/bars-white25.png) 50% 50% no-repeat no-repeat  !important;
+    background-size: 30px 30px;
+    width: 32px;
+    height: 30px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    margin: 0 !important;
+	border:0px solid;
+	
+	 &:hover{
+		background: url(../css/themes/images/icons-png/bars-black25.png) 50% 50% no-repeat  !important;
+	}
+}
+
+.ui-icon-barss
+.imgbokomslag{max-width:120px;}
+#iconimg{float:right;}
+
+.detaildata{
+	h4{
+		margin-bottom:0px;
+		padding-bottom:0px;
+		line-height:12px;
+		margin-top:6px
+		}
+	p{
+		margin-bottom:10px;
+		padding-bottom:10px;
+		display:inline;
+		}
+}
+
+
+.detailimg{
+margin-left:0.5em;
+}
+.detailchk{
+max-width:50%;
+}
+.boktitel h2{
+border-bottom:1px solid $mainDarkGreen;
+padding:0px;
+margin:10px;
+font-size:1.2em;
+}
+
+.imgbokomslagtumb img{
+max-width:100%;
+}
+.boktitelextra h3, .boktitelextra h4{
+margin:0px;
+}
+.boktitelextra h4{
+
+border-bottom:1px solid $mainDarkGreen;
+}
+.alsoreadbox h4{
+font-size:0.8em;
+margin-bottom:0px;
+padding:0px;
+}
+.vadtyckerandra {
+	margin-top:2%;
+	margin-bottom:0px;
+	h3 {
+		font-size:0.9em;
+		margin-bottom:0px;
+		padding:0px;
+		}
+	h4{
+		margin-top:4px;
+		margin-bottom:0px;
+		padding:0px;
+		}
+	ul{
+		padding-left:2px;
+		list-style:none;
+		margin:0px;
+		padding:0px;
+		}
+	li{
+		margin-bottom:2px;
+		}	
+	p{
+		font-size:0.8em;
+		margin:0px;
+		margin-bottom:4px;
+		}
+}
+
+.krypinvotelistitm {
+	margin:2px;
+	margin-bottom:0px;
+	float:left;
+	img{
+		width:40px;
+		border:1px solid #ccc;
+		}
+}
+
+.krypinvotelistitmDel{
+    display:block;
+	img{
+		max-width:24px;
+		min-width:22px;
+		border:0px;
+		}
+}
+
+.krypinvotelist{
+width:100%;
+display:block;
+float:left;
+background-color:#fff;
+list-style:none;    
+padding-left:10px
+}
+
+#votehead{margin-left:10px;
+}
+#forfalsowrite h4, #alsoreadbox h4, #userinfobox h4{
+margin:0px;
+margin-top:10px;
+font-size:0.9em;
+}
+.formlabel{
+font-weight:bold;
+font-size:0.8em;
+}
+.bytavatar img{
+	max-width:42px;
+	border:1px dotted #ccc;
+	 &:hover{
+		border:1px solid #000;
+		}
+}
+
+#bp_bokpuffenContainer{ font-family:Arial; font-size:0.9em; padding:4px;
+background-image: -moz-linear-gradient(top,	#FCF5B9, #FEF9CF);
+	background-image: -webkit-gradient(linear,left top,left bottom,	color-stop(0,#FCF5B9),color-stop(1,#FEF9CF));
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FCF5B9', EndColorStr='#FEF9CF')";
+	
+	a {
+		text-decoration:none;
+		}
+}
+
+#bp_bokpufflogolink{margin:5px 2px 0px 2px; display:block;}
+#bp_bokpufflogo{width:150px;}
+#bp_bokpuffmaincontbox{margin-top:0px;}
+#bp_bokpuffimgbox{float:left;margin:0px 4px 10px 4px;}
+#bp_bokpuffimg{max-height:100px; border:1px solid #000;}
+#bp_bokpuffcontbox{ 
+	margin-left:102px;
+	h2{ 
+		margin-bottom:1px; font-weight:bold;
+		}
+}
+
+.bp_bokpuffplayerboxcls{width:100%; margin-bottom:20px;}
+#bp_bokpuffplayercontbox{height:40px;max-height:50px;}
+#bp_bokpuffdownload{
+	margin-left:4px; 
+	text-decoration:none; 
+	color:#000; 
+	font-size:0.9em;
+	 &:hover{
+		color:#666;
+		}
+}
+
+
+#usermny{
+margin-bottom:2em;
+text-align:center;
+}
+#forfattare{
+	@extend .base_main_boxitem;
+	
+	background-color:$bgrgb_brun;
+	
+}
+ 
+#nyheter{    
+	@extend .base_main_boxitem;
+	background-color:$bgrgb_ljusbla;
+	ul{
+		padding-left:1.5em;		
+		margin-top:0px;
+        word-break: break-all;
+	}
+	li{		
+		margin-bottom:5px;
+	}
+	a {
+		text-decoration:none;
+		font-size:120%;
+	}	
+}
+
+#bokpuff{padding:3px;}
+#startsidan{background-color:#fff;}
+#sagomaskinimg{text-align:center;}
+#UlSearchResult{
+	iframe{display:none;}
+	li{
+		a{
+		min-height:120px;
+			img{
+			width:120px;
+			display: block;		
+			max-height:120px;
+			width: auto;
+			height: auto;
+			padding:0.3em;
+			padding-top:1.3em;
+			}
+		} 
+		p{
+			width:100%;
+			white-space:normal;
+		}
+	}
+	.ui-btn {  
+		background-color: $AjCustomlistitemHover; 
+		&:hover {  background-color: $AjCustomlistitem;	}
+	}
+ }
+#review iframe{width:100%;}
+#latestbooks{
+	@extend .base_main_boxitem;	
+	background-color:$bgrgb_ljuslila;
+	img{
+		max-width:140px;
+	}
+	div{		
+		padding-right:0.2em;
+		padding-left:0.2em;
+	}
+}
+#mybookmainbox{
+	.ui-btn {
+		background-color:$AjCustomlistitem;
+		&:hover {background-color:$AjCustomlistitemHover;}
+	}
+	.ui-collapsible-heading{ 
+		&:a {background-color:$AjCustomlistheader;}
+	}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  /* Styles */
+    .imgbokomslag{ max-width:60px; }
+    .detailimg .imgbokomslag{ max-width:170px; }
+    #usermny .imgbokomslag{ max-width:170px;}     
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+  /* Styles */
+   .imgbokomslag{ max-width:60px; }
+    .detailimg .imgbokomslag{ max-width:170px; }
+     #usermny .imgbokomslag{ max-width:170px; }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+  /* Styles */
+    .imgbokomslag{ max-width:50px; }
+    .detailimg .imgbokomslag{ max-width:150px; }
+     #usermny .imgbokomslag{ max-width:150px; }
+    
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  /* Styles */
+  .imgbokomslag{ max-width:60px; 
+                
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+  /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+  /* Styles */
+}
+
+/* iPhone 4+ ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  /* Styles */
+    #startsidan
+    {
+        font-size: 0.8em;
+    }
+}
+
+/* iPhone 5s ----------- */
+/* You've spent way too much on a phone */
+
+.detailimg .imgbokomslag{ width:100%; }
+#nobackgroundbtn{
+	background-color: #000/*{a-bhover-background-color}*/;
+	border-color: #000/*{a-bhover-border}*/;
+	color: $fontcolorlight /*{a-bhover-color}*/;
+	text-shadow:1px /*{a-bhover-shadow-x}*/ 0px /*{a-bhover-shadow-y}*/ 0px /*{a-bhover-shadow-radius}*/ #000 /*{a-bhover-shadow-color}*/;
+}
+
+.typesearchbox {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 1em 1.5em;
+  word-break: keep-all;
+  float: left;
+  text-decoration: none;
+  color: #000 !important; }
+    .typesearchbox[rel="5"] {
+        background-color: $bgrgb_ljuslila; }
+    .typesearchbox[rel="2"] {
+        background-color:$bgrgb_ljusrosa; }
+    .typesearchbox[rel="8"] {
+        background-color: $bgrgb_brun;
+        color: white !important; }
+    .typesearchbox[rel="7"] {
+        background-color: $bgrgb_lila; }
+    .typesearchbox[rel="13"] {
+        background-color: $bgrgb_morkgra;
+        color: #fff !important; }
+  @media screen and (max-width: 560px) {
+    .typesearchbox {
+      border: 3px solid #def;
+      padding: 0.5em 1em; } }
+  @media screen and (max-width: 430px) {
+    .typesearchbox {
+      border: 0px solid #fed;
+      font-size: 90%;
+      display: block;
+      padding: 0.4em 0.4em; } 
+      }
+
+.ui-field-contain {
+  border-bottom: 0px; }
+
+#messageboxen{
+ /* some styles to position the modal at the center of the page */
+    /* some styles to position the modal at the center of the page */
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 300px;
+    line-height: 14px;
+    height: 0px;
+  	min-height:0px;
+    margin-left: -150px;
+    margin-top: -10px;
+    background-color: #f1c40f;
+    text-align: center;
+    border-radius: 5px;
+  
+    /* needed styles for the overlay */
+    z-index: 10; /* keep on top of other elements on the page */
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
+}
+#adressMissing, #iamSureSendVotes, #JustVotedmessage{
+background-color:#fff !important;
+padding-top:4px;
+line-height:24px;
+}

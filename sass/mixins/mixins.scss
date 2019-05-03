@@ -1,0 +1,6 @@
+
+@mixin responsiveimage($imageurl) {
+
+width:image-width($imageurl);
+
+}

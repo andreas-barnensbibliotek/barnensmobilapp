@@ -1,0 +1,66 @@
+﻿<div data-role="header">
+        <div id="headlogo">
+            <img src="images/bbimages/bblogo2.png" />
+            <div id="debug">
+            </div>
+        </div>
+        <a id="menubtn" href="#nav-panel" data-icon="barss" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Menu</a>
+        
+    </div><!-- /header -->
+    <div role="main" class="ui-content jqm-content jqm-fullwidth">
+
+       
+        <div class="boktitel">
+        <h2>Mina böcker</h2>
+        </div>         
+        <div id="mybookmainbox"> 
+			
+            <div id='booklistSet' data-role='collapsible-set'> 
+                <% _.each(collection, function(model) { %>
+                    <div data-role="collapsible" data-inset="false">
+                        <h3><%= model.booklistnamn %></h3>
+                        <ul data-role="listview" class="listbgcolor">
+                            <% _.each(model.bookitems, function(item) { %>
+                                <li><a href="#bokdetail/<%= item.bookid %>">
+                                    <img src="<%= item.bookimgsrc %>">
+                                    <h2> <%= item.booktitle %></h2></a>
+                                </li>
+                            <% }); %>                           
+                        </ul>
+                    </div><!-- /collapsible -->
+                 <% }); %>  
+            </div>
+        	    
+
+	    </div>
+     <a data-rel="back" data-ajax="false" class="backbuttonurl ui-btn ui-shadow ui-corner-all ui-mini ui-btn-inline ui-icon-carat-l ui-btn-icon-left ui-alt-icon ui-nodisc-icon">Tillbaka</a>
+        
+    </div><!-- /content -->
+    <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">      
+        
+        <div id="usermny">
+            <a href="#krypin"><img class="imgbokomslag" src="images/bbimages/avatar/<%=model.avatar %>" /></a>
+        </div>
+        <ul data-role="listview" >
+            <li data-role="list-divider"></li>
+            <li><a href="#hem">Startsida</a></li>
+            <li><a href="#boktips">Boktips</a></li>
+            <li><a href="#katalog">Sök bok</a></li>
+            <li><a href="#sagomaskinen">Sagomaskinen</a></li>               
+            <li data-role="list-divider"></li>
+            <li><a href="#krypin">Krypin</a></li>
+            <li><a href="#mybooks">Mina böcker</a></li>
+            
+            <li data-role="list-divider"></li>
+              <% if(model.votedebug == 1 || model.votetime == 1){ %>                   
+                <%if (model.votedfortotal ==1){%>
+                    <li><a href="#votepagevotedtotal">Röstlista</a></li>  
+                <%}else{%>
+                    <li><a href="#votepage">Röstlista</a></li>
+                <%};%>
+            <%};%>
+            <li><a href="#login">Logga ut</a></li>   
+        </ul>
+        
+        
+    </div><!-- /panel -->

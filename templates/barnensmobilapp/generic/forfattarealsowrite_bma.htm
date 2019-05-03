@@ -1,0 +1,27 @@
+﻿ <h4>Författaren har även skrivit:</h4>
+    <div  class="ui-body ui-body-a ui-corner-all">
+    <% _.each(collection, function(model) { %>     
+              
+            <div class="ui-grid-d imgbokomslagtumb">
+                <% _.each(model.barnensbibliotek.forfattarealsowrite, function(item,i) { %>    
+                    
+                    <% if(i==0){ %>
+                        <div class="ui-block-a"><a href="#bokdetail/<%= item.bookid %>" ><img  src="<%=item.imgsrc%>" /></a></div>
+                    <%};%>
+                    <% if(i==1){ %>
+                        <div class="ui-block-b"><a href="#bokdetail/<%= item.bookid %>" ><img  src="<%=item.imgsrc%>" /></a></div>
+                    <%};%>
+                    <% if(i==2){ %>
+                        <div class="ui-block-c"><a href="#bokdetail/<%= item.bookid %>" ><img  src="<%=item.imgsrc%>" /></a></div>
+                    <%};%>
+                    <% if(i==3){ %>
+                        <div class="ui-block-d"><a href="#bokdetail/<%= item.bookid %>" ><img  src="<%=item.imgsrc%>" /></a></div>
+                    <%};%>
+                    <% if(i==4){ %>
+                        <div class="ui-block-e"><a href="#bokdetail/<%= item.bookid %>" ><img  src="<%=item.imgsrc%>" /></a></div>
+                    <%};%>     
+                <% }); %>           
+            </div>
+       
+    <% }); %>
+    </div>

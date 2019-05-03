@@ -1,0 +1,47 @@
+﻿<div data-role="header">
+        <div id="headlogo">
+            <img src="images/bbimages/bblogo2.png" />
+            <div id="debug">
+            </div>
+        </div>        
+        
+    </div><!-- /header -->
+    <div role="main" class="ui-content jqm-content jqm-fullwidth">
+
+        <h1>Välkommen!</h1>
+        <div id="Errormess"></div>
+        
+			<div id="logincont">
+				<div data-role="fieldcontain">
+					<input type="text" name="username" id="username" value="" tabindex="1" placeholder="Användarnamn" />
+				</div>
+				<div id="fnameDiv" data-role="fieldcontain">
+					<input id="password" name="password" type="password" tabindex="2" placeholder="Lösenord" />
+				</div>
+				
+				<fieldset class="ui-grid-a">
+					<div class="ui-block-a">
+						<button type="button" id="SubmitUserlogin" tabindex="3" data-theme="a">
+							Logga in
+						</button>
+					</div>
+					<div class="ui-block-b">
+						<button type="reset"  id="ResetUserlogin" tabindex="4" data-theme="a">
+							Avbryt
+						</button>
+					</div>
+				</fieldset>
+				<div id="InstallningarBack" data-inline="true">
+					<a id="registrera" data-rel="dialog" data-transition="pop" tabindex="5" data-role="button"> Skapa ny användare</a>
+				</div>
+			</div>
+           
+     <p>&nbsp;</p>
+    </div><!-- /content -->
+<script type="text/javascript">
+    $('#SubmitUserlogin').focus(function () {
+    $(this).next('input').focus();
+})
+
+</script>
+   

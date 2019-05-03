@@ -1,0 +1,110 @@
+﻿<div data-role="header">
+        <div id="headlogo">
+            <img src="images/bbimages/bblogo2.png" />
+            <div id="debug">
+            </div>
+        </div>
+        <a id="menubtn" href="#nav-panel" data-icon="barss" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Menu</a>
+        
+    </div><!-- /header -->
+    <div role="main" class="ui-content jqm-content jqm-fullwidth">        
+
+        <h1>Min röstlista </h1>
+        <p id="votedtxt">Välj böcker att rösta på i bland boktipsen eller sök efter boken och lägg din röst!</p>       
+       
+         
+        <div id="votelistmainbox"> 
+            <ul id="ul_votelistList" name="ul_votelistList" data-role="listview" data-inset="true" data-split-icon="gear" data-split-theme="d">
+               
+            </ul>
+            <h2 id="noresult">Finns inget att visa!</h2>
+
+            <div data-role="dialog" id="messageboxen" style="display:none;">
+                <div id="adressMissing" data-role="content" style="display:none;">
+                    <h3>Adress saknas!</h3>
+                    <p>Du måste ha fylla i adress och epost för att kunna rösta!</p>
+                    <a href="#krypin" class="ui-btn ui-btn-inline ui-shadow ui-corner-all">Lägg till adress i ditt Krypin</a>
+                </div>
+                <div id="iamSureSendVotes" style="display:none;">
+                    <h3>Är du säker på att du vill skicka in dina röster?</h3>
+                    <a href="#" id="votbtn" class="ui-btn ui-btn-inline ui-shadow ui-corner-all">Japp</a>
+                    <a href="#" id="notsure" class="ui-btn ui-btn-inline ui-shadow ui-corner-all">Nä vänta</a>
+                </div>
+                <div id="JustVotedmessage" style="display:none;">
+                    <h3>Du har nu röstat i Bokjuryn!</h3>
+                    <a href="#" id="btnJustVotedmessage" class="ui-btn ui-btn-inline ui-shadow ui-corner-all">Ok</a>
+                </div>
+                
+            </div>
+            <a href="#" id="sendvotes" class="ui-btn ui-btn-inline ui-shadow ui-corner-all" data-rel="dialog">Skicka in dina röster till bokjuryn</a>
+            <a href="#" id="update" class="ui-btn ui-btn-inline ui-shadow ui-corner-all">Uppdatera</a>
+            
+            <% 
+            setTimeout(function(){
+                var test = $('#ul_votelistList li').size();         
+            console.log("vänta1!");              
+                if(test >0){                            
+                    $('#votbtn').show();
+                    $('#update').hide();
+                    $('#noresult').hide();            
+                }else{
+                    setTimeout(function(){
+             console.log("vänta2!");    
+                        test = $('#ul_votelistList li').size();
+                        if(test >0){                            
+                            $('#votbtn').show();
+                            $('#update').hide();
+                            $('#noresult').hide();
+                        }else{
+                            setTimeout(function(){
+             console.log("vänta3!");    
+                                test = $('#ul_votelistList li').size();                       
+                                if(test >0){                            
+                                    $('#votbtn').show();
+                                    $('#update').hide();
+                                     $('#noresult').hide();
+                                };           
+                            },3000);            
+                        }
+                      },2000);    
+                }; 
+                         
+            },1000);
+            %>
+           
+        
+        
+
+<a data-rel="back" data-ajax="false" class="backbuttonurl ui-btn ui-shadow ui-corner-all ui-mini ui-btn-inline ui-icon-carat-l ui-btn-icon-left ui-alt-icon ui-nodisc-icon">Tillbaka</a>
+        
+<p>&nbsp;</p>
+ 
+
+</div><!-- /content -->
+<div data-role="panel" data-display="overlay" data-theme="b" id="nav-panel">      
+
+        <div id="usermny">
+            <a href="#krypin"><img class="imgbokomslag" src="images/bbimages/avatar/<%=model.avatar %>" /></a>
+        </div>
+        <ul data-role="listview" >
+            <li data-role="list-divider"></li>
+            <li><a href="#hem">Startsida</a></li>
+            <li><a href="#boktips">Boktips</a></li>
+            <li><a href="#katalog">Sök bok</a></li>
+            <li><a href="#sagomaskinen">Sagomaskinen</a></li>               
+            <li data-role="list-divider"></li>
+            <li><a href="#krypin">Krypin</a></li>
+            <li><a href="#mybooks">Mina böcker</a></li>
+            
+            <li data-role="list-divider"></li>
+            <% if(model.votedebug == 1 || model.votetime == 1){ %>                  
+                <%if (model.votedfortotal ==1){%>
+                    <li><a href="#votepagevotedtotal">Röstlista</a></li>  
+                <%}else{%>
+                    <li><a href="#votepage">Röstlista</a></li>
+                <%};%>
+            <%};%>
+            <li><a href="#login">Logga ut</a></li>   
+        </ul>
+
+</div><!-- /panel -->
