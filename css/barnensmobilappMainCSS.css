@@ -193,7 +193,7 @@ html .ui-alt-icon .ui-radio-off:after {
 
 /* Loader */
 .ui-icon-loading {
-  background: url("/css/themes/images/ajax-loader.gif");
+  background: url("../css/themes/images/ajax-loader.gif");
   background-size: 2.875em 2.875em; }
 
 /* Swatches */
@@ -4726,10 +4726,17 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 #bp_bokpuffenContainer {
   font-family: Arial;
   font-size: 0.9em;
-  padding: 4px;
+  padding-top: .2rem;
+  margin: .5rem;
   background-image: -moz-linear-gradient(top, #FCF5B9, #FEF9CF);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FCF5B9), color-stop(1, #FEF9CF));
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FCF5B9', EndColorStr='#FEF9CF')"; }
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FCF5B9', EndColorStr='#FEF9CF')"; 
+  overflow:hidden;
+
+}
+#bp_bokpuffenContainer audio{
+  height: 40px;
+}
   #bp_bokpuffenContainer a {
     text-decoration: none; }
 
@@ -4759,13 +4766,12 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 
 .bp_bokpuffplayerboxcls {
     width: 100%;
-    margin-bottom: 20px;
     margin-top: .5rem;
 }
 
 #bp_bokpuffplayercontbox {
-  height: 40px;
-  max-height: 50px; }
+  padding-bottom:.1rem;
+}
 
 #bp_bokpuffdownload {
   margin-left: 4px;
@@ -4795,7 +4801,7 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
     font-size: 120%; }
 
 #bokpuff {
-  padding: 3px; }
+  }
 
 #startsidan {
   background-color: #fff; }
